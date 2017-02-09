@@ -16,10 +16,10 @@ public class TCPServer implements Runnable
         try
         {
             //Attach an input stream and outputstream to send/receive via the perclientsocket
-            BufferedReader input = new BufferedReader(new InputStreamReader(s.getInputStream()));
+            BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
            
             //Accumulate all the input in a line. That is why we create a buffer...
-            PrintWriter output = new PrintWriter(s.getOutputStream());
+            PrintWriter output = new PrintWriter(socket.getOutputStream());
       
             //Attach an input stream and outputstream
             //to send/receive via the clientsocket
